@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: gray;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .logo h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-bar input {
+            width: 400px;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        .search-bar button:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Sigma Web</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="https://www.google.com">
+            <button onclick="performSearch()">Search</button>
+        </div>
+    </div>
+
+    <script>
+        function performSearch() {
+            const query = document.getElementById('search').value;
+            if (query) {
+                location.href = query;
+            } else {
+                alert("Please enter a link term.");
+            }
+        }
+    </script>
+</body>
+</html>
